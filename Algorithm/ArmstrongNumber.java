@@ -1,7 +1,14 @@
+// 用数学符号表示，对于一个 n 位数 N：
+
+// N = d1^3 + d2^3 + d3^3 + ... + dn^3
+
+// 其中 d1, d2, d3, ... , dn 是 N 的各个位数。
+
+
 public class ArmstrongNumber {
     public static void main(String[] args) {
-        int lowerLimit = 1; // 指定范围的下限
-        int upperLimit = 10000; // 指定范围的上限
+        int lowerLimit = 1; 
+        int upperLimit = 10000; 
 
         System.out.println("Armstrong numbers in the range " + lowerLimit + " to " + upperLimit + ":");
         
