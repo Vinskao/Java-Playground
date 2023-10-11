@@ -2,7 +2,7 @@ package hw1;
 
 public class Refund {
     public static void main(String[] args) {
-        double p = 1000; //實付金額
+        double p = 10000; //實付金額
         double np = 9; //應付金額
         int a = 1000;
         int b = 500;

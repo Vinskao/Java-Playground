@@ -2,7 +2,7 @@ package hw1;
 
 public class LeapYear {
     public static void main(String[] args) {
-        int y= 2300;
+        int y= 2304;
         boolean isLeap = false;
 
         if (y % 400 == 0){

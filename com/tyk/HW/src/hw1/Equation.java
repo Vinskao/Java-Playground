@@ -4,8 +4,8 @@ public class Equation {
         int a = 1;
         int b = -5;
         int c = -3;
-        double x1 = 0;
-        double x2 = 0;
+        double x1;
+        double x2;
 
         if (b * b - 4 * a * c < 0 ){
             System.out.println("沒有實根");
