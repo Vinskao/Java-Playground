@@ -1,7 +1,7 @@
 public class ArmstrongNumber {
     public static void main(String[] args) {
-        int lowerLimit = 1; // 指定范围的下限
-        int upperLimit = 10000; // 指定范围的上限
+        int lowerLimit = 1; 
+        int upperLimit = 10000; 
 
         System.out.println("Armstrong numbers in the range " + lowerLimit + " to " + upperLimit + ":");
         
@@ -14,15 +14,14 @@ public class ArmstrongNumber {
 
     public static boolean isArmstrongNumber(int number) {
         int originalNumber = number;
-        int numberOfDigits = String.valueOf(number).length();
         int sum = 0;
-
+    
         while (number > 0) {
             int digit = number % 10;
-            sum += Math.pow(digit, numberOfDigits);
+            sum += Math.pow(digit, String.valueOf(originalNumber).length()); 
             number /= 10;
         }
-
+    
         return sum == originalNumber;
     }
 }
