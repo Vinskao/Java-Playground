@@ -32,30 +32,30 @@ public class Electricity {
                 total += ds * summerRateS1;
             } else if (ds <= 330) {
                 total += 120 * summerRateS1;
-                total += (ds-120) * summerRateS1;
+                total += (ds-120) * summerRateS2;
             } else if (ds <= 500) {
                 total += 120 * summerRateS1;
-                total += (330-120) * summerRateS1;
-                total += (ds-330) * summerRateS1;
+                total += (330-120) * summerRateS2;
+                total += (ds-330) * summerRateS3;
             } else if (ds <= 700) {
                 total += 120 * summerRateS1;
-                total += (330-120) * summerRateS1;
-                total += (500-330) * summerRateS1;
-                total += (ds-500) * summerRateS1;
+                total += (330-120) * summerRateS2;
+                total += (500-330) * summerRateS3;
+                total += (ds-500) * summerRateS4;
             } else if (ds <= 1000) {
                 total += 120 * summerRateS1;
-                total += (330-120) * summerRateS1;
-                total += (500-330) * summerRateS1;
-                total += (700-500) * summerRateS1;
-                total += (ds-700) * summerRateS1;
+                total += (330-120) * summerRateS2;
+                total += (500-330) * summerRateS3;
+                total += (700-500) * summerRateS4;
+                total += (ds-700) * summerRateS5;
 
             } else {
                 total += 120 * summerRateS1;
-                total += (330 - 120) * summerRateS1;
-                total += (500 - 330) * summerRateS1;
-                total += (700 - 500) * summerRateS1;
-                total += (1000 - 700) * summerRateS1;
-                total += (ds - 1000) * summerRateS1;
+                total += (330 - 120) * summerRateS2;
+                total += (500 - 330) * summerRateS3;
+                total += (700 - 500) * summerRateS4;
+                total += (1000 - 700) * summerRateS5;
+                total += (ds - 1000) * summerRateS6;
             }
         } else {
             if (ds <= 120) {
