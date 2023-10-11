@@ -21,15 +21,14 @@ public class ArmstrongNumber {
 
     public static boolean isArmstrongNumber(int number) {
         int originalNumber = number;
-        int numberOfDigits = String.valueOf(number).length();
         int sum = 0;
-
+    
         while (number > 0) {
             int digit = number % 10;
-            sum += Math.pow(digit, numberOfDigits);
+            sum += Math.pow(digit, String.valueOf(originalNumber).length()); 
             number /= 10;
         }
-
+    
         return sum == originalNumber;
     }
 }
