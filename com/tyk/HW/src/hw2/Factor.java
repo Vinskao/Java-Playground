@@ -19,6 +19,7 @@ public class Factor {
                 System.out.print(f[i] + " ");
             }
         }
+        System.out.println();
         System.out.println(count);
     }
 }
