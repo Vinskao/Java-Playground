@@ -2,14 +2,10 @@ package hw2;
 
 public class Interest {
     public static void main(String[] args) {
-        double a;
-        double b;
         int year = 1;
         int p = 100000;
         double ra = 0.1;
         double rb = 0.05;
-        double suma = 0;
-        double sumb = 0;
 
         while (!(p*(1+ra*year) < p*Math.pow((1+rb),year))){
             year++;
