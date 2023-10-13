@@ -23,7 +23,6 @@ public class Armstrong {
         double sum1 = Math.pow(digit1, 3);
         double sum2 = Math.pow(digit2, 3);
         double sum3 = Math.pow(digit3, 3);
-
         sum = (int)(sum1 + sum2 + sum3);
 
         return sum == number;
