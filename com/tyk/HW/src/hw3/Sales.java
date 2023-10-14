@@ -1,5 +1,18 @@
 package hw3;
 public class Sales {
+    public static int[] sumByProduct(int[][] s){
+        int[] productSum = new int[s[0].length];
+
+        for (int i = 0; i < s[0].length; i++){
+            int sum = 0;
+            for (int j = 0; j < s.length; j++){
+                sum += s[j][i];
+            }
+            productSum[i] = sum;
+        }
+        return productSum;
+    }
+
     public static int[] sum(int[][] s){
 
         int[] sales = new int[s.length];
@@ -31,6 +44,7 @@ public class Sales {
         };
 
         String[] names = {"Joanne","Tom","Tina"};
+        String[] productNames = {"A", "B", "C", "D", "E"};
 
         int[] personalSum = sum(salesData);
 
@@ -45,5 +59,12 @@ public class Sales {
                 System.out.println("最高業績: "  + names[i]);
             }
         }
+
+        int[] productSum = sumByProduct(salesData);
+
+        for (int i = 0; i < productSum.length; i++) {
+            System.out.println(productNames[i] + " " + productSum[i]);
+        }
+
     }
 }
