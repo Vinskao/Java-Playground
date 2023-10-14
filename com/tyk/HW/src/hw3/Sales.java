@@ -45,13 +45,13 @@ public class Sales {
 
         String[] names = {"Joanne","Tom","Tina"};
         String[] productNames = {"A", "B", "C", "D", "E"};
-
+        //每一個銷售員的銷售總金額
         int[] personalSum = sum(salesData);
 
         for (int i = 0; i < salesData.length; i++) {
             System.out.println(names[i]+" "+personalSum[i]);
         }
-
+        //有最好業績（銷售總金額最多者）的銷售員
         int highestSale = highestSale(personalSum);
 
         for (int i = 0; i < salesData.length; i++) {
@@ -59,12 +59,13 @@ public class Sales {
                 System.out.println("最高業績: "  + names[i]);
             }
         }
-
+        //每一項產品的銷售總金額
         int[] productSum = sumByProduct(salesData);
 
         for (int i = 0; i < productSum.length; i++) {
             System.out.println(productNames[i] + " " + productSum[i]);
         }
+        //銷售總金額最多的產品
 
     }
 }
