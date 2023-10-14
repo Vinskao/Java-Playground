@@ -1,5 +1,25 @@
 package hw3;
 public class Sales {
+    public static int highestSaleProduct(int[] sale){
+        int highestSale = 0;
+
+        for(int i = 0; i < sale.length; i++){
+            if (sale[i] > sale[highestSale]) {
+                highestSale = i;
+            }
+        }
+        return highestSale;
+    }
+    public static int highestSale(int[] sale){
+        int highestSale = 0;
+
+        for(int temp : sale){ // temp 是循环变量，它会依次代表数组 sale 中的每个元素
+            if(temp > highestSale){
+                highestSale = temp;
+            }
+        }
+        return highestSale;
+    }
     public static int[] sumByProduct(int[][] s){
         int[] productSum = new int[s[0].length];
 
@@ -26,16 +46,7 @@ public class Sales {
         }
         return sales;
     }
-    public static int highestSale(int[] sale){
-        int highestSale = 0;
 
-        for(int temp : sale){ // temp 是循环变量，它会依次代表数组 sale 中的每个元素
-            if(temp > highestSale){
-                highestSale = temp;
-            }
-        }
-        return highestSale;
-    }
     public static void main(String[] args) {
         int[][] salesData = {
                 {33, 32, 56, 45, 33},
@@ -66,6 +77,7 @@ public class Sales {
             System.out.println(productNames[i] + " " + productSum[i]);
         }
         //銷售總金額最多的產品
-
+        int highestSaleProduct = highestSaleProduct(productSum);
+        System.out.println("最熱銷: " + productNames[highestSaleProduct]);
     }
 }
