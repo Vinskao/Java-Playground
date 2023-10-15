@@ -38,12 +38,26 @@ public class Rain {
         String[] season = {"1","2","3","4"};
         String[] month = {"1","2","3","4","5","6","7","8","9","10","11","12"};
 
+//        int[] yearData = new int[rainData.length];
+//        for (int i = 0; i < rainData.length; i++) {
+//            System.out.println(yearData);
+//        }
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("請輸入：");
         String input = scanner.next();
 
         if (input.equals("all")){
+            int sumData = 0;
+            for(int i = 0; i < rainData.length; i++){
+                for(int j = 0; j < rainData[i].length; j++){
+                    for(int k = 0; k < rainData[i][j].length; k++){
+                        sumData += rainData[i][j][k];
+                    }
+                }
+            }
+            System.out.println(sumData / rainData.length * rainData[0].length * rainData[0][0].length);
         } else if (input.equals("year")){
 
         } else if (input.equals("season")){
