@@ -4,37 +4,36 @@ public class Rain {
     public static void main(String[] args) {
         int[][][] rainData = {
                 {
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4}
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3}
                 },
                 {
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4}
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3}
                 },
                 {
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4}
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3}
                 },
                 {
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4}
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3}
                 },
                 {
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4},
-                        {1, 2, 3, 4}
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3},
+                        {1, 2, 3}
                 }
         };
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("請輸入all、year、season 或 month：");
@@ -83,15 +82,14 @@ public class Rain {
             int inputMonth = scanner.nextInt();
             if (inputMonth < 1 || inputMonth > 12){
                 System.out.println("error");
-            } else if (inputMonth >= 1 || inputMonth <= 4) {
+            } else {
                 int season = (inputMonth - 1) / 3;
+                int monthLocate = (inputMonth - 1) % 3;
                 double sumMonth = 0;
                 for (int i = 0; i < rainData.length; i++){
-                    for (int j = 0; j < rainData[season].length; j++) {
-                        sumMonth += rainData[i][j][inputMonth - 1];
-                    }
+                    sumMonth += rainData[i][season][monthLocate];
                 }
-                System.out.println(inputMonth + " 月的總降雨總量：" + sumMonth);
+                System.out.println(inputMonth + " 月的平均降雨量：" + sumMonth/(rainData.length));
             }
         } else {
             System.out.println("error");
