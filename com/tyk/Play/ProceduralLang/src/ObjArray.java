@@ -19,7 +19,5 @@ public class ObjArray {
         for (ObjArray emp : emps) {
             emp.printData();
         }
-
-        // 现在你可以在数组中存储 ObjArray 对象
     }
 }
