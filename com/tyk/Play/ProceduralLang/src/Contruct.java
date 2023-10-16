@@ -1,6 +1,6 @@
 public class Contruct {
-    public int employeeId;
-    public String employeeName;
+    int employeeId;
+    String employeeName;
     public Contruct(int id, String name) {
         this.employeeId = id;
         this.employeeName = name;
