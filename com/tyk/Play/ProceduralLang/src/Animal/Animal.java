@@ -1,9 +1,7 @@
 package Animal;
 
-public class Animal {
-    public void run() {
-        System.out.println("Animal is running");
-    }
+public abstract class Animal {
+    public abstract void run();
     public static void main(String[] args) {
         Animal animal = new Dog(); // Dog is an instance
         animal = new Cat();

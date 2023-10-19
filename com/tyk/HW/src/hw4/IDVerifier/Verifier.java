@@ -1,8 +1,4 @@
-package IDVerifier;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+package hw4.IDVerifier;
 
 public class Verifier {
     public String ID;
