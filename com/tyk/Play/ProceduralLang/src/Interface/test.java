@@ -18,7 +18,9 @@ public class test {
         son.method1();
         int result = son.method2("Hello, World!");
 
-
         System.out.println("Result: " + result);
+
+        ImplementSubclass implement = new ImplementSubclass();
+        implement.method1();
     }
 }
