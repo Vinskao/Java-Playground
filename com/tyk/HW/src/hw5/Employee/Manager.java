@@ -11,6 +11,7 @@ public class Manager extends AbstractPermanentEmployee {
     public void setCommuteAllowance(int commuteAllowance){
         this.commuteAllowance = commuteAllowance;
     }
+    @Override
     public void giveSalary(){
         int Salary = getSalary();
         int lunchAllowance = getLunchAllowance();

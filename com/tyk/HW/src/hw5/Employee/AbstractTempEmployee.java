@@ -9,6 +9,7 @@ public abstract class AbstractTempEmployee extends Employee {
     public int getHourlyWage(){
         return hourlyWage;
     }
+    @Override
     public void giveSalary(){
     }
 }

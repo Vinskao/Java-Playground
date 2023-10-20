@@ -10,9 +10,13 @@
 寫兩個類別分別為Circle和Rectangle，用以實作上述介面，並驗証結果。
 
 3.	例外處理的練習-Stack
-產生一個class名為Stack，有兩個成員變數分別為一int陣列(用以存放資料)和top(int) (用以標示目前最上層資料的註標值)；
+產生一個class名為Stack，有兩個成員變數分別為一
+int陣列(用以存放資料)
+和top(int) 
+(用以標示目前最上層資料的註標值)；
 有兩個成員方法push()和pop()，分別用來放資料和取資料。
-產生兩個exception class名為StackEmptyException和StackFullException，分別用來處理Stack空的和滿的狀況。
+產生兩個exception class名為StackEmptyException和StackFullException，
+分別用來處理Stack空的和滿的狀況。
 提示：Stack以先進後出(First In Last Out)的方式存取資料。
 
 4.	檔案和集合的練習-EmployeeFile
