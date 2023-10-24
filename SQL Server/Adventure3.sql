@@ -92,20 +92,18 @@ while @myID <=3
     END
 
 alter PROCEDURE My_CustomerTotals
-@person_ID int
+@customer_ID int
 as
 select 
 sum(totalDue) as yearlyDue,
-year(ssoh.ModifiedDate) as year,
-month(ssoh.ModifiedDate) as month,
-sc.personID from sales.Customer as sc
+year(ssoh.OrderDate) as year,
+month(ssoh.OrderDate) as month,
+sc.CustomerID from sales.Customer as sc
 join sales.salesorderheader as ssoh on sc.CustomerID = ssoh.CustomerID
-where personID = @person_ID
-group by month(ssoh.ModifiedDate), year(ssoh.ModifiedDate) , sc.personID ;
+where sc.CustomerID = @customer_ID
+group by month(ssoh.OrderDate), year(ssoh.OrderDate) , sc.CustomerID;
 
-exec My_CustomerTotals 1881;
-
-,year(ssoh.ModifiedDate),month(ssoh.ModifiedDate)
+exec My_CustomerTotals 29867;
 
 select * from sales.salesorderheader
 
@@ -114,3 +112,17 @@ join sales.salesorderheader as ssoh on sc.CustomerID = ssoh.CustomerID
 
 
 group by year(ssoh.ModifiedDate);
+
+alter PROCEDURE All_CustomerTotals
+as
+select 
+sc.CustomerID,
+year(ssoh.OrderDate) as year,
+month(ssoh.OrderDate) as month,
+sum(totalDue) as yearlyDue
+from sales.Customer as sc
+join sales.salesorderheader as ssoh on sc.CustomerID = ssoh.CustomerID
+group by sc.CustomerID , year(ssoh.OrderDate), month(ssoh.OrderDate)
+order by CustomerID;
+
+exec All_CustomerTotals;

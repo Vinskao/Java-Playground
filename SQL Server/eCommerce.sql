@@ -833,3 +833,28 @@ AS
 select p_name, department, price from products where price < @pricelessthan;
 
 exec productPrice_less_than 800;
+
+
+alter trigger inform
+on users
+after INSERT
+as
+print 'added the fuck day'
+
+select * from users;
+
+INSERT INTO users (first_name, last_name)
+VALUES ('TY', 'Sorane');
+
+update users set last_name = 'Sorane' where id = 3
+
+insert into users(first_name,last_name)
+values('T','Y')
+
+select *,
+case
+when price > 700 then 'expensive'
+when price < 300 then 'cheap'
+else 'normal'
+end as 'merchandise'
+from products;
