@@ -13,3 +13,4 @@ public class test {
         tempSalary.giveSalary();
     }
 }
+//1=manager 2=normal 3=sales 4=temp

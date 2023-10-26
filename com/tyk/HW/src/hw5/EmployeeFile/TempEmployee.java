@@ -6,12 +6,14 @@ public class TempEmployee extends AbstractTempEmployee {
     }
     public void giveSalary(){
         int tempSalary = this.getHourlyWage();
-        System.out.println("Temp Employee $ " + tempSalary * 250 * 8);
+
         String name = this.getName();
         String sex = this.getSex();
         String email = this.getEmail();
-        System.out.println(name);
-        System.out.println(sex);
-        System.out.println(email);
+
+        System.out.print(name + " ");
+        System.out.print(sex + " ");
+        System.out.print(email + " ");
+        System.out.println("Temp Employee $ " + tempSalary * 250 * 8);
     }
 }
