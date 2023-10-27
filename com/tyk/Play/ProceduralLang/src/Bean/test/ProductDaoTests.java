@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ProductDaoTests {
     public static void main(String[] args) {
-        File input = new File("C:\\Java\\Java-Playground\\com\\tyk\\Play\\ProceduralLang\\src\\Bean\\input.txt");
+        File input = new File("/Users/vinskao/Desktop/Java-Playground/com/tyk/Play/ProceduralLang/src/Bean/input.txt");
         ProductDaoFile dao = new ProductDaoFile(input);
         List<ProductBean> productList = dao.getContent();
         System.out.println(productList);

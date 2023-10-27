@@ -22,7 +22,7 @@ public class ProductDaoFile {
         }
         List<ProductBean> result = new ArrayList<>();
         String line;
-        try (BufferedReader in = new BufferedReader(new FileReader("C:\\Java\\Java-Playground\\com\\tyk\\Play\\ProceduralLang\\src\\Bean\\input.txt"));
+        try (BufferedReader in = new BufferedReader(new FileReader("/Users/vinskao/Desktop/Java-Playground/com/tyk/Play/ProceduralLang/src/Bean/input.txt"));
         ) {
             line = in.readLine();
             while (line != null) { //讀取到流的末尾時，它會返回 null
