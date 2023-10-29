@@ -45,11 +45,11 @@ public class Dao {
     private Bean parseString(String line) throws ParseException { //string放入array後設屬性
         if (line != null) {
             String[] array = line.split(","); //將分割的string放入array中
-            if (array != null && array.length == 6) {
+            if (array != null && array.length == 7) {
                 int typeEmp = Integer.parseInt(array[0]);
                 int baseSalary = Integer.parseInt(array[1]);
                 int bonus = Integer.parseInt(array[5]);
-                int hourlyWage = Integer.parseInt(array[1]);
+                int hourlyWage = Integer.parseInt(array[6]);
                 //調用Bean.java的設屬性能力
                 Bean bean = new Bean();
                 bean.setTypeEmp(typeEmp);
