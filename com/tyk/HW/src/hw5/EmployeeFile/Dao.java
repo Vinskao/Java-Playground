@@ -49,10 +49,12 @@ public class Dao {
                 int typeEmp = Integer.parseInt(array[0]);
                 int baseSalary = Integer.parseInt(array[1]);
                 int bonus = Integer.parseInt(array[5]);
+                int hourlyWage = Integer.parseInt(array[1]);
                 //調用Bean.java的設屬性能力
                 Bean bean = new Bean();
                 bean.setTypeEmp(typeEmp);
                 bean.setBaseSalaryInput(baseSalary);
+                bean.setHourlyWage(hourlyWage);
                 bean.setName(array[2]);
                 bean.setSex(array[3]);
                 bean.setEmail(array[4]);
@@ -63,5 +65,6 @@ public class Dao {
         }
         return null;
     }
+
 
 }

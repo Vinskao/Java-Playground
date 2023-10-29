@@ -7,6 +7,7 @@ public class Bean {
     private String sex;
     private String email;
     private int bonus;
+    private int hourlyWage;
     @Override
     public String toString() {
         return "Bean{" +
@@ -16,7 +17,17 @@ public class Bean {
                 ", sex='" + sex + '\'' +
                 ", email='" + email + '\'' +
                 ", bonus='" + bonus + '\'' +
+                ", hourlyWage=" + hourlyWage +
                 '}';
+    }
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
+    public int getHourlyWage() {
+        return hourlyWage;
+    }
+    public void setHourlyWage(int hourlyWage) {
+        this.hourlyWage = hourlyWage;
     }
     public Integer getTypeEmp(){return typeEmp;} //不接受输入值，它只返回int的值
     public void setTypeEmp(Integer typeEmp){ //接受int輸入值，回傳void

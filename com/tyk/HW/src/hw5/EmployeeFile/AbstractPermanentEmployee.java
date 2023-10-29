@@ -12,6 +12,5 @@ public abstract class AbstractPermanentEmployee extends Employee {
         return salary;
     }
     public void giveSalary(){
-
     }
 }

@@ -11,11 +11,5 @@ public class NormalEmployee extends AbstractPermanentEmployee {
         String name = this.getName();
         String sex = this.getSex();
         String email = this.getEmail();
-
-        System.out.print(name + " ");
-        System.out.print(sex + " ");
-        System.out.print(email + " ");
-        System.out.println("Normal Employee $ "+ normalSalary);
-
     }
 }
