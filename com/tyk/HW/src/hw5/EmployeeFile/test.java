@@ -36,9 +36,7 @@ public class test {
                 employee = tempEmployee;
             }
             employeeList.add(employee);
-
         }
-
         System.out.println(beanList);
 //        System.out.println(employeeList);
     }

@@ -29,8 +29,8 @@ public class Dao {
         {
             line = in.readLine();
             while (line != null){
-//                System.out.println(line);
-//                System.out.println(result);
+                System.out.println(line);
+                System.out.println(result);
                 Bean bean = this.parseString(line);
                 result.add(bean);
                 line = in.readLine();
@@ -59,7 +59,7 @@ public class Dao {
                 bean.setSex(array[3]);
                 bean.setEmail(array[4]);
                 bean.setBonus(bonus);
-//                System.out.println(bean);
+                System.out.println(bean);
                 return bean;
             }
         }
