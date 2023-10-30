@@ -13,6 +13,6 @@ public class ProductDaoTests {
         File input = new File("/Users/vinskao/Desktop/Java-Playground/com/tyk/Play/ProceduralLang/src/Bean/input.txt");
         ProductDaoFile dao = new ProductDaoFile(input);
         List<ProductBean> productList = dao.getContent();
-        System.out.println(productList);
+//        System.out.println(productList);
     }
 }

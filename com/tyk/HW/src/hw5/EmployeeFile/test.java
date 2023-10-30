@@ -4,7 +4,7 @@ import java.util.*;
 
 public class test {
     public static void main(String[] args) {
-        File input = new File("/Users/vinskao/Desktop/Java-Playground/com/tyk/HW/src/hw5/EmployeeFile/input.txt");
+        File input = new File("src/hw5/EmployeeFile/input.txt");
         Dao dao = new Dao(input);
         List<Bean> beanList = dao.getContent();
         List<Employee> employeeList = new ArrayList<>();//存储的对象类型必须是 Employee 或其子类
@@ -40,7 +40,7 @@ public class test {
         }
 
         System.out.println(beanList);
-        System.out.println(employeeList);
+//        System.out.println(employeeList);
     }
 }
 //1=manager 2=normal 3=sales 4=temp
