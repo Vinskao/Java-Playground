@@ -19,7 +19,6 @@ public class Identifier {
         if (s == null){
             return false;
         }
-
         if (s.length() != 10){
             return false;
         }
@@ -27,7 +26,6 @@ public class Identifier {
         if (cha < 'A' || cha > 'Z'){
             return false;
         }
-
         for (int i=1; i<10; i++){
             char c = ID.charAt(i);
             if(c < '0' || c > '9'){

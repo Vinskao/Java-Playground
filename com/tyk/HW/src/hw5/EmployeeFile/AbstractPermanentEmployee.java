@@ -1,4 +1,5 @@
-package hw5.Employee;
+package hw5.EmployeeFile;
+
 public abstract class AbstractPermanentEmployee extends Employee {
     private int salary;
     protected static final int lunchAllowance = 2400;
@@ -11,6 +12,5 @@ public abstract class AbstractPermanentEmployee extends Employee {
         return salary;
     }
     public void giveSalary(){
-
     }
 }

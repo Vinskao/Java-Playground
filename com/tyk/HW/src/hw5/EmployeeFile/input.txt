@@ -1,0 +1,4 @@
+1,1000000,TY,Male,tianyikao@gmail.com,2000000,0
+2,700000,Chiaki,Female,sackerchiaki@gmail.com,0,0
+3,400000,Sorane,Female,morichikusorane@gmail.com,1000000,0
+4,0,Tesar Z,Female,zztesar@gmail.com,0,300
