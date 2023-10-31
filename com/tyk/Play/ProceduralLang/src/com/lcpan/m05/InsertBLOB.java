@@ -19,7 +19,7 @@ public class InsertBLOB {
 			FileInputStream fis = new FileInputStream(inFile);
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, inFile);
-			pstmt.setBinaryStream(2, fis);
+			pstmt.setBinaryStream(2, fis); //不能用setBlob 大小不夠
 			int count = pstmt.executeUpdate();
 			if (count > 0)
 				System.out.println("Insert blob is successful!");	

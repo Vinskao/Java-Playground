@@ -12,9 +12,9 @@ public class QueryStoredProcedure {
 		try {
 			conn = DriverManager.getConnection(ConnConst.DB_URL, ConnConst.USER, ConnConst.PASSWORD);
 			CallableStatement cstmt = conn.prepareCall(SQL);
-			cstmt.setString(1, "1001");
-			cstmt.registerOutParameter(2, Types.VARCHAR);
-			cstmt.registerOutParameter(3, Types.INTEGER);
+			cstmt.setString(1, "1001"); //in
+			cstmt.registerOutParameter(2, Types.VARCHAR); //out
+			cstmt.registerOutParameter(3, Types.INTEGER); //out
 			cstmt.execute();
 			System.out.print("name = " + cstmt.getString(2));
 			System.out.println(", salary = " + cstmt.getInt(3));
