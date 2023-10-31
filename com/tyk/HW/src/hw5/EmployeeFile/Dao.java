@@ -19,6 +19,7 @@ public class Dao {
     public Dao(File input) {  //讀取資料放入list
         this.content = this.loadFile(input);
     }
+
     private List<Bean> loadFile(File input){ //讀取txt並寫入string再寫入list
         if (input == null){
             return null;
@@ -59,7 +60,7 @@ public class Dao {
                 bean.setSex(array[3]);
                 bean.setEmail(array[4]);
                 bean.setBonus(bonus);
-                System.out.println(bean);
+//                System.out.println(bean);
                 return bean;
             }
         }

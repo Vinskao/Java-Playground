@@ -8,6 +8,15 @@ public class Bean {
     private String email;
     private int bonus;
     private int hourlyWage;
+    private int totalSalary;
+
+    public int getTotalSalary() {
+        return totalSalary;
+    }
+
+    public void setTotalSalary(int totalSalary) {
+        this.totalSalary = totalSalary;
+    }
     @Override
     public String toString() {
         return "Bean{" +
@@ -18,6 +27,7 @@ public class Bean {
                 ", email='" + email + '\'' +
                 ", bonus='" + bonus + '\'' +
                 ", hourlyWage=" + hourlyWage +
+                ", totalSalary=" + totalSalary +
                 '}';
     }
     public void setBonus(int bonus) {

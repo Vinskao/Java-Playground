@@ -5,12 +5,15 @@ public class SalesEmployee extends AbstractPermanentEmployee {
         super(salary, name, sex, email);
     }
     protected static final int salesBonus = 1000000;
+    private int totalSalary;
     public void giveSalary(){
         int salary = this.getSalary();
-        int salesSalary = salary + lunchAllowance + this.salesBonus;
-
-        String name = this.getName();
-        String sex = this.getSex();
-        String email = this.getEmail();
+        this.totalSalary = salary + lunchAllowance + this.salesBonus;
+    }
+    public int getTotalSalary() {
+        return totalSalary;
+    }
+    public void setTotalSalary(int totalSalary) {
+        this.totalSalary = totalSalary;
     }
 }
