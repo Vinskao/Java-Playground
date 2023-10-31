@@ -10,13 +10,17 @@ public class QueryDemo1 {
 			String url = "jdbc:sqlserver://localhost:1433;databaseName=jdbc; trustServerCertificate = true";
 			conn = DriverManager.getConnection(url, "sa", "Wawi247525=");
 		
-			String sql = "SELECT ename, salary FROM employee";
+			String sql = "SELECT ename, salary, hiredate FROM employee";
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
 				System.out.print("name = " + rs.getString("ename"));
-				System.out.println(", salary = " + rs.getInt("salary"));
+				System.out.print(", salary = " + rs.getInt("salary"));
+				System.out.println(", hiredate = " + rs.getString("hiredate"));
+				System.out.print("name = " + rs.getString(1));
+				System.out.print(", salary = " + rs.getInt(2));
+				System.out.println(", hiredate = " + rs.getString(3));
 			}
 		
 			rs.close();
@@ -24,7 +28,8 @@ public class QueryDemo1 {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			System.err.println("發生 SQL 錯誤: " + e.getMessage());//紅字
 		} finally {
 			if (conn != null)
 				try {

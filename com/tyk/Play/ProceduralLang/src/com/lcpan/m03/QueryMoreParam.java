@@ -13,7 +13,7 @@ public class QueryMoreParam {
 		try {
 			conn = DriverManager.getConnection(ConnConst.DB_URL, ConnConst.USER, ConnConst.PASSWORD);
 			
-			int deptno = 100;
+			int deptno = 200;
 			String title = "engineer";
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, deptno);

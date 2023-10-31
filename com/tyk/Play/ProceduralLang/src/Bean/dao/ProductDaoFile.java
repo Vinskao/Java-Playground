@@ -20,7 +20,7 @@ public class ProductDaoFile {
         if (input == null) {
             return null;
         }
-        List<ProductBean> result = new ArrayList<>();
+        ArrayList<ProductBean> result = new ArrayList<>();
         String line;
         try (BufferedReader in = new BufferedReader(new FileReader("/Users/vinskao/Desktop/Java-Playground/com/tyk/Play/ProceduralLang/src/Bean/input.txt"));
         ) {
@@ -33,6 +33,7 @@ public class ProductDaoFile {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println(result);
         return result;
     }
     private ProductBean parseString(String line) throws ParseException {
@@ -52,7 +53,7 @@ public class ProductDaoFile {
                 bean.setName(array[1]);
                 bean.setPrice(price);
 
-
+//                System.out.println(bean);
                 return bean;
 
             }

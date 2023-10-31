@@ -1,9 +1,9 @@
 package hw4;
 
-public class IDGenerator {
+public class IDGenerator2 {
     String hucoma;
     String value;
-    public IDGenerator(String hucoma, String value) {
+    public IDGenerator2(String hucoma, String value) {
         this.hucoma = hucoma;
         this.value = value;
     }
@@ -11,29 +11,29 @@ public class IDGenerator {
 
     }
     public static void main(String[] args) {
-        IDGenerator[] checkIDArray = {
-                new IDGenerator("A","10"),
-                new IDGenerator("B","11"),
-                new IDGenerator("C","12"),
-                new IDGenerator("D","13"),
-                new IDGenerator("E","14"),
-                new IDGenerator("F","15"),
-                new IDGenerator("G","16"),
-                new IDGenerator("H","17"),
-                new IDGenerator("I","34"),
-                new IDGenerator("J","18"),
-                new IDGenerator("K","19"),
-                new IDGenerator("M","21"),
-                new IDGenerator("N","22"),
-                new IDGenerator("O","35"),
-                new IDGenerator("P","23"),
-                new IDGenerator("Q","24"),
-                new IDGenerator("T","27"),
-                new IDGenerator("U","28"),
-                new IDGenerator("V","29"),
-                new IDGenerator("W","32"),
-                new IDGenerator("X","30"),
-                new IDGenerator("Z","33"),
+        IDGenerator2[] checkIDArray = {
+                new IDGenerator2("A","10"),
+                new IDGenerator2("B","11"),
+                new IDGenerator2("C","12"),
+                new IDGenerator2("D","13"),
+                new IDGenerator2("E","14"),
+                new IDGenerator2("F","15"),
+                new IDGenerator2("G","16"),
+                new IDGenerator2("H","17"),
+                new IDGenerator2("I","34"),
+                new IDGenerator2("J","18"),
+                new IDGenerator2("K","19"),
+                new IDGenerator2("M","21"),
+                new IDGenerator2("N","22"),
+                new IDGenerator2("O","35"),
+                new IDGenerator2("P","23"),
+                new IDGenerator2("Q","24"),
+                new IDGenerator2("T","27"),
+                new IDGenerator2("U","28"),
+                new IDGenerator2("V","29"),
+                new IDGenerator2("W","32"),
+                new IDGenerator2("X","30"),
+                new IDGenerator2("Z","33"),
         };
 
         boolean isID = false;
@@ -53,7 +53,7 @@ public class IDGenerator {
                 }
             }
             String getValue = null;
-            for (IDGenerator object : checkIDArray){
+            for (IDGenerator2 object : checkIDArray){
                 if(object.hucoma.equals(inputHucoma)){
                     getValue = object.value;
                     break;

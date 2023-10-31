@@ -29,8 +29,8 @@ public class Dao {
         {
             line = in.readLine();
             while (line != null){
-//                System.out.println(line);
-//                System.out.println(result);
+                System.out.println(line);
+                System.out.println(result);
                 Bean bean = this.parseString(line);
                 result.add(bean);
                 line = in.readLine();

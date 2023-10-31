@@ -36,11 +36,9 @@ public class test {
                 employee = tempEmployee;
             }
             employeeList.add(employee);
-
         }
-
         System.out.println(beanList);
-        System.out.println(employeeList);
+//        System.out.println(employeeList);
     }
 }
 //1=manager 2=normal 3=sales 4=temp

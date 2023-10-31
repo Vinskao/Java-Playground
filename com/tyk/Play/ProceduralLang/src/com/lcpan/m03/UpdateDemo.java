@@ -15,7 +15,7 @@ public class UpdateDemo {
 			conn = DriverManager.getConnection(ConnConst.DB_URL, ConnConst.USER, ConnConst.PASSWORD);
 			
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, 58000);
+			pstmt.setInt(1, 90000000);
 			pstmt.setInt(2, 1009);
 			int count = pstmt.executeUpdate();
 			System.out.println("update count = " + count);
