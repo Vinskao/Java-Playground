@@ -25,7 +25,7 @@ public class Dao {
         }
         List result = new ArrayList<>();
         String line = null; //將讀取好的值放入string中
-        try (BufferedReader in = new BufferedReader(new FileReader("/Users/vinskao/Desktop/Java-Playground/com/tyk/HW/src/hw5/EmployeeFile/input.txt")))
+        try (BufferedReader in = new BufferedReader(new FileReader("src/hw5/EmployeeFile/input.txt")))
         {
             line = in.readLine();
             while (line != null){
