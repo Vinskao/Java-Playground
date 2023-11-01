@@ -12,7 +12,7 @@ public class InsertBLOB {
 	
 	public static void main(String[] args) {
 		Connection conn = null;
-		String inFile = "res/Tomcat.gif";
+		String inFile = "res/Tomcat.gif"; //插入檔案
 		try {
 			conn = DriverManager.getConnection(ConnConst.DB_URL, ConnConst.USER, ConnConst.PASSWORD);			
 			

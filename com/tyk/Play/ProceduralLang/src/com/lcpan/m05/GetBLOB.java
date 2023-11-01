@@ -12,8 +12,8 @@ public class GetBLOB {
 	
 	public static void main(String[] args) {
 		Connection conn = null;
-		String inFile = "res/Tomcat.gif";
-		String outFile = "res/test.gif";
+		String inFile = "res/Tomcat.gif"; //插入檔案
+		String outFile = "res/test.gif"; //輸出檔案
 		try {
 			conn = DriverManager.getConnection(ConnConst.DB_URL, ConnConst.USER, ConnConst.PASSWORD);
 	

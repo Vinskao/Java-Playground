@@ -1,8 +1,8 @@
 package com.lcpan.m06;
 
-import java.sql.*;
-
 import com.lcpan.db.ConnConst;
+
+import java.sql.*;
 
 public class DumpData {
 	private static final String SQL =
