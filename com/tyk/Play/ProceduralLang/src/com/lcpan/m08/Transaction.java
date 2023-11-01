@@ -16,16 +16,16 @@ public class Transaction {
 			conn.setAutoCommit(false);
 
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, 401);
-			pstmt.setString(2, "Sales");
-			pstmt.executeUpdate();
-			pstmt.setInt(1, 402);
-			pstmt.setString(2, "Service");
-			pstmt.executeUpdate();
-			pstmt.setInt(1, 403);
-			pstmt.setString(2, "Production");
-			pstmt.executeUpdate();
-			conn.commit();
+//			pstmt.setInt(1, 401);
+//			pstmt.setString(2, "Sales");
+//			pstmt.executeUpdate();
+//			pstmt.setInt(1, 402);
+//			pstmt.setString(2, "Service");
+//			pstmt.executeUpdate();
+//			pstmt.setInt(1, 403);
+//			pstmt.setString(2, "Production");
+//			pstmt.executeUpdate();
+//			conn.commit();
 
 			pstmt.setInt(1, 404);
 			pstmt.setString(2, "Sales1");

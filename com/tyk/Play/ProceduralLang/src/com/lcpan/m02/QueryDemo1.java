@@ -7,6 +7,8 @@ public class QueryDemo1 {
 		Connection conn = null;
 		try {     
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			//查找mssql的class driver
+			//Returns the Class object associated with the class or interface with the given string name, using the given class loader.
 			String url = "jdbc:sqlserver://localhost:1433;databaseName=jdbc; trustServerCertificate = true";
 			conn = DriverManager.getConnection(url, "sa", "Wawi247525=");
 		
