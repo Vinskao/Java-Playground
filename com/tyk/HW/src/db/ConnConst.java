@@ -1,4 +1,4 @@
-package com.lcpan.db;
+package db;
 
 public class ConnConst {
 	public static final String JDBC_DRIVER = 
