@@ -7,7 +7,7 @@ import db.ConnConst;
 public class DumpDataToCSV {
 	private static final String SQL = "SELECT * FROM employee";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		Connection conn = null;
 		try {
 			conn = DriverManager.getConnection(ConnConst.DB_URL, ConnConst.USER, ConnConst.PASSWORD);
@@ -38,8 +38,6 @@ public class DumpDataToCSV {
 				}
 				fw.append("\n");
 			}
-
-
 			rs.close();
 			stmt.close();
 			fw.flush();
@@ -50,7 +48,13 @@ public class DumpDataToCSV {
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
     }
 } 
